@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { AUDIENCE, STEPS } from '../data';
+import { MODES, STEPS } from '../data';
 import { FadeUp, MaskLine } from './RevealText';
 import { Arrow } from './Icons';
 import { ease } from '../utils/easings';
@@ -21,7 +21,7 @@ export default function Method() {
           </h2>
           <FadeUp>
             <p className="body">
-              Cada proyecto sigue una ruta definida, con etapas, tiempos y entregables que conoces desde el primer día.
+              Cada proyecto sigue una ruta clara, con etapas, tiempos y resultados que conoces desde la primera conversación.
             </p>
           </FadeUp>
         </div>
@@ -60,20 +60,20 @@ export function Audience() {
     <section className="audience">
       <div className="container">
         <div className="audience__head">
-          <p className="eyebrow"><span className="eyebrow__line" /> ¿Para quién?</p>
+          <p className="eyebrow"><span className="eyebrow__line" /> Modalidades de trabajo</p>
           <h2 className="h2">
-            <MaskLine>Diseñado para quienes</MaskLine>
-            <MaskLine delay={0.1}>quieren <em>crecer con orden.</em></MaskLine>
+            <MaskLine>Elige cómo quieres</MaskLine>
+            <MaskLine delay={0.1}><em>trabajar juntos.</em></MaskLine>
           </h2>
         </div>
         <motion.ul
-          className="audience__list"
+          className="audience__list audience__list--3"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={{ visible: { transition: { staggerChildren: 0.09, delayChildren: 0.1 } } }}
         >
-          {AUDIENCE.map((a, i) => (
+          {MODES.map((a, i) => (
             <motion.li
               key={a.t}
               variants={{

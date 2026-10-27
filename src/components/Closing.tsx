@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion';
-import { FAQ, NAV, PHONE_LABEL, TESTIMONIALS, WA_DEFAULT } from '../data';
+import { EMAIL, FAQ, NAV, PHONE_LABEL, TESTIMONIALS, WA_DEFAULT } from '../data';
 import { FadeUp, MaskLine } from './RevealText';
 import MagneticButton from './MagneticButton';
 import Logo from './Logo';
-import { Arrow, Calendar, Instagram, LinkedIn, Mail, Pin, Plus, Spark, WhatsApp } from './Icons';
+import { Arrow, Clock, Instagram, LinkedIn, Mail, Pin, Plus, Spark, WhatsApp } from './Icons';
 import { useParallax } from '../hooks/useParallax';
 import { scrollToId } from '../utils/scroll';
 import { ease } from '../utils/easings';
@@ -61,7 +61,7 @@ export function Faq() {
               <span className="faq__card-ic"><WhatsApp size={20} /></span>
               <span>
                 <b>¿Tienes otra pregunta?</b>
-                <small>Escríbeme y te respondo personalmente.</small>
+                <small>Escríbeme y te respondo en menos de 48h.</small>
               </span>
               <Arrow size={18} />
             </a>
@@ -115,23 +115,24 @@ export function Contact() {
             <p className="eyebrow eyebrow--light"><Spark size={12} /> Hagamos que tu proyecto avance</p>
             <h2 className="contact__title">
               <MaskLine>Hablemos de</MaskLine>
-              <MaskLine delay={0.1}>tu <em>fórmula.</em></MaskLine>
+              <MaskLine delay={0.1}>tu <em>marca.</em></MaskLine>
             </h2>
             <FadeUp>
               <p className="contact__sub">
-                Cuéntame tu proyecto y diseñemos juntos la mejor estrategia legal. La atención es exclusivamente con
-                cita previa, presencial o virtual.
+                Cuéntame tu proyecto y diseñemos juntos la estrategia para que tu marca llegue a los medios, las
+                personas y las oportunidades correctas. La primera consulta es gratis.
               </p>
             </FadeUp>
             <div className="contact__actions">
               <MagneticButton href={WA_DEFAULT} external className="btn btn--gold btn--lg" cursor="Escribir">
-                <WhatsApp size={20} /> Agendar por WhatsApp <span className="btn__ic"><Arrow size={16} /></span>
+                <WhatsApp size={20} /> Agendar consulta gratis <span className="btn__ic"><Arrow size={16} /></span>
               </MagneticButton>
             </div>
             <ul className="contact__info">
-              <li><Calendar size={18} /> Atención con cita previa</li>
+              <li><Clock size={18} /> 30 min gratis por videollamada</li>
               <li><WhatsApp size={17} /> {PHONE_LABEL}</li>
-              <li><Pin size={18} /> República Dominicana · Presencial y virtual</li>
+              <li><a href={`mailto:${EMAIL}`}><Mail size={18} /> {EMAIL}</a></li>
+              <li><Pin size={18} /> República Dominicana · Respuesta en 48h</li>
             </ul>
           </div>
           <div className="contact__visual">
@@ -161,7 +162,7 @@ export function Footer() {
             <a href="#" aria-label="LinkedIn"><LinkedIn size={16} /></a>
             <a href="#" aria-label="Instagram"><Instagram size={18} /></a>
             <a href={WA_DEFAULT} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><WhatsApp size={17} /></a>
-            <a href="#" aria-label="Correo"><Mail size={18} /></a>
+            <a href={`mailto:${EMAIL}`} aria-label="Correo"><Mail size={18} /></a>
           </div>
         </div>
         <motion.div
@@ -172,11 +173,11 @@ export function Footer() {
           transition={{ duration: 1.2, ease: ease('premium') }}
           aria-hidden
         >
-          Fórmula <em>Legal</em>
+          AG <em>Communications</em>
         </motion.div>
         <div className="footer__bottom">
-          <span>© {new Date().getFullYear()} Diana Pérez Rubiera — Fórmula Legal. Todos los derechos reservados.</span>
-          <span>Legal Design · Governance · Compliance · Strategic Planning · Legal Project Management</span>
+          <span>© {new Date().getFullYear()} Andreina Galván — AG Communications. Todos los derechos reservados.</span>
+          <span>Estrategia · Medios · Publicidad</span>
         </div>
       </div>
     </footer>

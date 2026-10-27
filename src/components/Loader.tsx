@@ -20,24 +20,20 @@ export default function Loader() {
           exit={{ clipPath: 'inset(0 0 100% 0)' }}
           transition={{ duration: 0.9, ease: ease('premium') }}
         >
-          <svg width="88" height="88" viewBox="0 0 48 48" aria-hidden>
-            <motion.path
-              d="M10 8h12v32h18M22 24h11"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="3"
-              strokeLinecap="square"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 1, ease: ease('smooth') }}
-            />
-          </svg>
+          <motion.img
+            src="/images/ag-mark.png"
+            alt=""
+            width={150}
+            initial={{ clipPath: 'inset(0 100% 0 0)', opacity: 0.4 }}
+            animate={{ clipPath: 'inset(0 0% 0 0)', opacity: 1 }}
+            transition={{ duration: 1, ease: ease('smooth') }}
+          />
           <motion.p
             initial={{ opacity: 0, letterSpacing: '0.2em' }}
             animate={{ opacity: 1, letterSpacing: '0.5em' }}
             transition={{ duration: 1.1, delay: 0.15 }}
           >
-            FÓRMULA LEGAL
+            COMMUNICATIONS
           </motion.p>
         </motion.div>
       )}

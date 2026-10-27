@@ -7,7 +7,7 @@ import Nav from './components/Nav';
 import Hero from './components/Hero';
 import About, { Manifesto } from './components/About';
 import Services from './components/Services';
-import LegalDesignShowcase from './components/LegalDesignShowcase';
+import StrategyShowcase from './components/StrategyShowcase';
 import Method, { Audience } from './components/Method';
 import { Contact, Faq, Footer, Testimonials, WhatsAppFloat } from './components/Closing';
 import { setLenis } from './utils/scroll';
@@ -40,7 +40,7 @@ export default function App() {
         <Manifesto />
         <About />
         <Services />
-        <LegalDesignShowcase />
+        <StrategyShowcase />
         <Method />
         <Audience />
         <Testimonials />

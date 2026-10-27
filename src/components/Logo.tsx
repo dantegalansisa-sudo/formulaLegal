@@ -1,25 +1,37 @@
-export function Monogram({ size = 40, className = '' }: { size?: number; className?: string }) {
+/** A|G mark from the AG Communications logo (transparent PNG). */
+export function Monogram({
+  size = 40,
+  light = false,
+  className = '',
+}: {
+  size?: number;
+  light?: boolean;
+  className?: string;
+}) {
   return (
-    <svg width={size} height={size} viewBox="0 0 48 48" className={className} aria-hidden>
-      <path
-        d="M10 8h12v32h18M22 24h11"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="4.2"
-        strokeLinecap="square"
-      />
-    </svg>
+    <img
+      src={light ? '/images/ag-mark-light.png' : '/images/ag-mark.png'}
+      width={size}
+      height={Math.round(size * 0.44)}
+      className={`monogram ${className}`}
+      alt=""
+      aria-hidden
+      draggable={false}
+    />
   );
 }
 
 export default function Logo({ light = false }: { light?: boolean }) {
   return (
     <span className={`logo ${light ? 'logo--light' : ''}`}>
-      <Monogram size={34} className="logo__mark" />
+      <span className="logo__marks">
+        <Monogram size={58} className="logo__mark logo__mark--dark" />
+        <Monogram size={58} light className="logo__mark logo__mark--light" />
+      </span>
       <span className="logo__divider" />
       <span className="logo__text">
-        <strong>Diana Pérez Rubiera</strong>
-        <small>Fórmula Legal</small>
+        <strong>Communications</strong>
+        <small>Estrategia · Medios · Publicidad</small>
       </span>
     </span>
   );

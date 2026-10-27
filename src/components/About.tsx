@@ -7,11 +7,11 @@ import { ease } from '../utils/easings';
 import { Spark } from './Icons';
 
 const MANIFESTO =
-  'Creo en un derecho cercano, claro y orientado a resultados. Uno que se entiende, que se usa y que genera valor real para las personas y los negocios.';
+  'La comunicación es acción y la acción es comunicación. Por eso cada mensaje que diseño tiene un propósito: conectar tu marca con las personas, los medios y las oportunidades correctas.';
 
 function Word({ children, progress, range }: { children: string; progress: MotionValue<number>; range: [number, number] }) {
   const opacity = useTransform(progress, range, [0.14, 1]);
-  const highlight = ['cercano,', 'claro', 'valor', 'real'].includes(children);
+  const highlight = ['acción', 'comunicación.', 'conectar', 'oportunidades'].includes(children);
   return (
     <span className={`mword ${highlight ? 'mword--em' : ''}`}>
       <motion.span style={{ opacity }}>{children}</motion.span>{' '}
@@ -36,15 +36,16 @@ export function Manifesto() {
             </Word>
           ))}
         </p>
+        <p className="manifesto__cite">— Inspirada en Joan Costa</p>
       </div>
     </section>
   );
 }
 
 const PILLARS = [
-  { t: 'Claridad', d: 'Documentos y procesos que cualquiera entiende.' },
-  { t: 'Estrategia', d: 'Decisiones legales alineadas con tu negocio.' },
-  { t: 'Cercanía', d: 'Acompañamiento personal, de principio a fin.' },
+  { t: 'Estrategia', d: 'Cada acción responde a un objetivo de tu marca.' },
+  { t: 'Medios', d: 'Relaciones reales con periodistas, medios y creadores.' },
+  { t: 'Resultados', d: 'Seguimiento y reportes claros de lo logrado.' },
 ];
 
 export default function About() {
@@ -63,8 +64,8 @@ export default function About() {
               },
             }}
           >
-            <span className="about__arch-word">Diana</span>
-            <motion.img src="/images/diana.webp" alt="Diana Pérez Rubiera" style={{ y }} loading="lazy" />
+            <span className="about__arch-word">Andreina</span>
+            <motion.img src="/images/diana.webp" alt="Andreina Galván" style={{ y }} loading="lazy" />
           </motion.div>
           <motion.div
             className="about__quote"
@@ -74,7 +75,7 @@ export default function About() {
             transition={{ duration: 1, delay: 0.4, ease: ease('out') }}
           >
             <span className="about__quote-mark">“</span>
-            El derecho también puede ser una herramienta para <em>construir, innovar</em> y hacer las cosas mejor.
+            Una buena historia no se cuenta sola: necesita <em>estrategia, medios</em> y el momento correcto.
           </motion.div>
           <motion.span
             className="about__flag"
@@ -97,21 +98,21 @@ export default function About() {
         <div className="about__content">
           <p className="eyebrow"><span className="eyebrow__line" /> Sobre mí</p>
           <h2 className="h2">
-            <MaskLine>Más que asesoría,</MaskLine>
-            <MaskLine delay={0.1}>una <em>alianza</em> estratégica.</MaskLine>
+            <MaskLine>Más que difusión,</MaskLine>
+            <MaskLine delay={0.1}>una <em>voz</em> estratégica.</MaskLine>
           </h2>
           <FadeUp>
             <p className="lead">
-              Soy Diana Pérez Rubiera, abogada y fundadora de <strong>Fórmula Legal</strong>. Combino el conocimiento
-              jurídico con visión de negocio y herramientas de diseño para crear soluciones legales que las personas
-              realmente entienden y usan.
+              Soy Andreina Galván, licenciada en Comunicación Social mención Periodismo y fundadora de{' '}
+              <strong>AG Communications</strong>. Mi experiencia en periodismo, relaciones públicas y comunicación
+              corporativa me permite ver tu marca como la ve un medio: como una historia que vale la pena contar.
             </p>
           </FadeUp>
           <FadeUp delay={0.1}>
             <p className="body">
-              Acompaño a empresas, emprendedores y profesionales en diseño legal, gobierno corporativo, cumplimiento
-              normativo, planificación estratégica y gestión de proyectos legales — con un enfoque cercano, ordenado y
-              siempre a la medida.
+              Desde una consultoría estratégica independiente acompaño a marcas, empresas e instituciones en
+              publicidad en medios, relaciones públicas, influencer marketing, campañas y activaciones — con un
+              enfoque cercano, ordenado y siempre orientado a resultados.
             </p>
           </FadeUp>
 
@@ -134,17 +135,17 @@ export default function About() {
 
           <FadeUp className="about__sign">
             <span className="about__sign-line" />
-            <span className="script">Diana Pérez Rubiera</span>
+            <span className="script">Andreina Galván</span>
           </FadeUp>
         </div>
       </div>
 
       <div className="container stats">
         {[
-          { n: 5, p: '+', s: '', l: 'Áreas de práctica integradas' },
-          { n: 100, p: '', s: '%', l: 'Soluciones a la medida' },
-          { n: 4, p: '', s: '', l: 'Etapas en un método claro' },
-          { n: 1, p: '', s: ':1', l: 'Atención personalizada' },
+          { n: 5, p: '', s: '', l: 'Servicios integrados' },
+          { n: 3, p: '', s: '', l: 'Modalidades de trabajo' },
+          { n: 30, p: '', s: ' min', l: 'Primera consulta gratis' },
+          { n: 48, p: '', s: 'h', l: 'Respuesta máxima' },
         ].map((s, i) => (
           <motion.div
             key={s.l}

@@ -70,7 +70,7 @@ export default function Nav() {
 
           <a className="nav__cta" href={WA_DEFAULT} target="_blank" rel="noopener noreferrer">
             <Calendar size={17} />
-            <span>Atención con cita previa</span>
+            <span>Consulta gratis · 30 min</span>
           </a>
 
           <button className="nav__burger" onClick={() => setOpen((o) => !o)} aria-label={open ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={open}>
@@ -90,7 +90,7 @@ export default function Nav() {
             transition={{ duration: 0.75, ease: ease('premium') }}
           >
             <div className="menu__glow" />
-            <Monogram size={260} className="menu__mark" />
+            <Monogram size={300} light className="menu__mark" />
             <ul className="menu__list">
               {NAV.map((n, i) => (
                 <li key={n.id}>
@@ -118,7 +118,7 @@ export default function Nav() {
               transition={{ delay: 0.55, duration: 0.6 }}
             >
               <a className="btn btn--gold btn--block" href={WA_DEFAULT} target="_blank" rel="noopener noreferrer">
-                <WhatsApp size={18} /> Agendar mi consulta <Arrow size={18} />
+                <WhatsApp size={18} /> Agendar consulta gratis <Arrow size={18} />
               </a>
               <div className="menu__meta">
                 <span>{PHONE_LABEL}</span>

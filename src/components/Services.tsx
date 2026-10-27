@@ -56,7 +56,7 @@ function ServiceCard({
           </div>
           <div className="scard__ctas">
             <MagneticButton
-              href={wa(`Hola Diana, me interesa el servicio de ${s.en} (${s.title} ${s.accent}). ¿Podemos agendar una consulta?`)}
+              href={wa(`Hola Andreina, me interesa el servicio de ${s.title} ${s.accent} (${s.en}). ¿Podemos agendar la consulta gratuita?`)}
               external
               className="btn btn--card"
               cursor="WhatsApp"
@@ -85,14 +85,14 @@ export default function Services() {
         <div>
           <p className="eyebrow"><span className="eyebrow__line" /> Servicios</p>
           <h2 className="h2 h2--xl">
-            <MaskLine>Cinco áreas,</MaskLine>
-            <MaskLine delay={0.1}><em>una sola fórmula.</em></MaskLine>
+            <MaskLine>Cinco servicios,</MaskLine>
+            <MaskLine delay={0.1}><em>una sola voz.</em></MaskLine>
           </h2>
         </div>
         <FadeUp className="services__intro">
           <p>
-            Integro experiencia jurídica, visión de negocio y diseño para ofrecer soluciones prácticas, alineadas con
-            tus objetivos. Elige un área y descubre cómo puedo ayudarte.
+            Integro medios, relaciones públicas, creadores y experiencias de marca en una estrategia coherente con
+            tus objetivos. Elige un servicio y agenda tu consulta gratuita.
           </p>
           <motion.div
             className="services__index"

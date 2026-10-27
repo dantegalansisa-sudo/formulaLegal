@@ -1,5 +1,5 @@
 /* =========================================================
-   FÓRMULA LEGAL — Diana Pérez Rubiera
+   AG COMMUNICATIONS — Andreina Galván
    ========================================================= */
 :root {
   --bg: #f7f1ea;
@@ -428,9 +428,30 @@ html.has-cursor * {
   transition: color 0.4s;
 }
 
-.logo__mark {
-  color: var(--gold);
+.logo__marks {
+  position: relative;
+  display: grid;
   flex-shrink: 0;
+}
+
+.logo__mark {
+  grid-area: 1 / 1;
+  height: auto;
+  transition: opacity 0.4s;
+}
+
+.logo__mark--light,
+.nav--open .logo__mark--dark {
+  opacity: 0;
+}
+
+.nav--open .logo__mark--light {
+  opacity: 1;
+}
+
+.monogram {
+  display: block;
+  height: auto;
 }
 
 .logo__divider {
@@ -446,15 +467,15 @@ html.has-cursor * {
 }
 
 .logo__text strong {
-  font-size: 13.5px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
 }
 
 .logo__text small {
-  font-size: 9.5px;
-  letter-spacing: 0.55em;
+  font-size: 9px;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -594,9 +615,9 @@ html.has-cursor * {
 
 .menu__mark {
   position: absolute;
-  right: -50px;
-  top: 90px;
-  color: rgba(218, 185, 147, 0.07);
+  right: -60px;
+  top: 110px;
+  opacity: 0.06;
 }
 
 .menu__list {
@@ -788,6 +809,14 @@ html.has-cursor * {
   font-size: 0.5em;
   color: var(--gold);
   font-style: normal;
+}
+
+.hero-d__stats sup {
+  font-size: 0.34em;
+  font-weight: 600;
+  letter-spacing: 0;
+  margin-left: 0.12em;
+  vertical-align: 1.4em;
 }
 
 .hero-d__stats .colon {
@@ -1140,6 +1169,15 @@ html.has-cursor * {
   font-size: clamp(30px, 4.4vw, 64px);
   line-height: 1.16;
   letter-spacing: -0.025em;
+}
+
+.manifesto__cite {
+  margin-top: 28px;
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--muted);
 }
 
 .mword--em {
@@ -2425,6 +2463,10 @@ html.has-cursor * {
   gap: 16px;
 }
 
+.audience__list--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .audience__list li {
   position: relative;
   padding: 30px 26px 80px;
@@ -2762,6 +2804,17 @@ html.has-cursor * {
   gap: 10px;
 }
 
+.contact__info a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  word-break: break-all;
+}
+
+.contact__info a:hover {
+  color: var(--gold-2);
+}
+
 .contact__info svg {
   color: var(--gold-2);
 }
@@ -2837,7 +2890,7 @@ html.has-cursor * {
 }
 
 .footer__word {
-  font-size: clamp(60px, 13.4vw, 210px);
+  font-size: clamp(40px, 9.6vw, 150px);
   font-weight: 800;
   letter-spacing: -0.065em;
   line-height: 0.85;
@@ -2968,8 +3021,7 @@ html.has-cursor * {
   }
 
   .logo__mark {
-    width: 28px;
-    height: 28px;
+    width: 46px;
   }
 
   .logo__divider {
@@ -2977,13 +3029,13 @@ html.has-cursor * {
   }
 
   .logo__text strong {
-    font-size: 11px;
-    letter-spacing: 0.12em;
+    font-size: 10.5px;
+    letter-spacing: 0.24em;
   }
 
   .logo__text small {
-    font-size: 8px;
-    letter-spacing: 0.48em;
+    font-size: 7.5px;
+    letter-spacing: 0.18em;
   }
 
   /* Hero switch */
@@ -3018,7 +3070,7 @@ html.has-cursor * {
   }
 
   .mcard__w1 {
-    font-size: 22.5vw;
+    font-size: 19.5vw;
     font-weight: 800;
     letter-spacing: -0.06em;
     line-height: 0.86;
@@ -3502,7 +3554,7 @@ html.has-cursor * {
   }
 
   .footer__word {
-    font-size: 14.6vw;
+    font-size: 10.4vw;
     margin: 40px 0 24px;
   }
 

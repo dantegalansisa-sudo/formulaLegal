@@ -1,35 +1,23 @@
-# Fórmula Legal — Diana Pérez Rubiera
+# AG Communications — Andreina Galván
 
-Sitio web de **Fórmula Legal**: Legal Design · Governance · Compliance · Strategic Planning · Legal Project Management.
+Sitio web de **AG Communications**: estrategia, medios y publicidad.
+Publicidad en medios · Relaciones públicas · Influencer marketing · Campañas y activaciones · Comunicación estratégica.
 
 Stack: React + TypeScript + Vite + Framer Motion + Lenis (scroll suave) + CSS.
 
 ```bash
 npm install
-npm run dev      # http://localhost:5173
-npm run build    # genera /dist
+npm run dev
+npm run build
 ```
-
-## Estructura del home
-
-1. Hero (versión PC y versión móvil propia, estilo portada de revista)
-2. Ticker de áreas de práctica
-3. Manifiesto (texto que se ilumina con el scroll)
-4. Sobre mí + cifras
-5. Servicios — tarjetas apiladas con visuales animados por servicio y CTA a WhatsApp
-6. Legal Design en acción — comparador antes/después
-7. Método (4 etapas)
-8. ¿Para quién?
-9. Testimonios (contenido de muestra)
-10. Preguntas frecuentes
-11. Contacto / cita previa
-12. Footer
 
 ## Pendientes con la clienta
 
+- Foto profesional de Andreina (hoy se usa una foto de muestra en todo el sitio).
+- Casos reales con fotos y resultados, y logos de marcas con las que ha trabajado.
 - Testimonios reales (los actuales son de ejemplo).
-- Enlaces de Instagram, LinkedIn y correo (`href="#"` en `Hero`, `Nav` y `Closing`).
-- Fotos adicionales (hoy se usa la misma foto en todo el sitio).
+- Enlaces correctos de LinkedIn e Instagram (`href="#"` en `Hero`, `Nav` y `Closing`).
+- Definir si se presenta como agencia ("nosotros") o consultora independiente ("yo"); el sitio usa "yo".
 - Al publicar, poner la URL absoluta en `og:image` de `index.html` para la vista previa en WhatsApp.
 
-Imágenes de referencia/inspiración en `referencias/`.
+Logo original en `new perfil/`; referencias de diseño en `referencias/`.

@@ -1,8 +1,11 @@
-export const PHONE = '18296339084';
-export const PHONE_LABEL = '+1 (829) 633-9084';
+export const BRAND = 'AG Communications';
+export const OWNER = 'Andreina Galván';
+export const PHONE = '18098758239';
+export const PHONE_LABEL = '809-875-8239';
+export const EMAIL = 'Andreinagalvana@outlook.com';
 
 export const wa = (msg: string) => `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
-export const WA_DEFAULT = wa('Hola Diana, me gustaría agendar una consulta con Fórmula Legal.');
+export const WA_DEFAULT = wa('Hola Andreina, me gustaría agendar una consulta gratuita con AG Communications.');
 
 export const NAV = [
   { id: 'inicio', label: 'Inicio' },
@@ -12,7 +15,7 @@ export const NAV = [
   { id: 'contacto', label: 'Contacto' },
 ];
 
-export type ServiceKey = 'design' | 'governance' | 'compliance' | 'planning' | 'pm';
+export type ServiceKey = 'media' | 'pr' | 'influencer' | 'activations' | 'counsel';
 
 export interface Service {
   key: ServiceKey;
@@ -28,88 +31,88 @@ export interface Service {
 
 export const SERVICES: Service[] = [
   {
-    key: 'design',
+    key: 'media',
     n: '01',
-    en: 'Legal Design',
-    title: 'Diseño',
-    accent: 'legal',
+    en: 'Media Buying',
+    title: 'Publicidad',
+    accent: 'en medios',
     lead:
-      'Transformo contratos, políticas y procesos en documentos claros, visuales y fáciles de usar. El derecho deja de ser un obstáculo y se convierte en una herramienta que tu equipo entiende.',
+      'Planifico, coordino y negocio tus espacios publicitarios en medios digitales, impresos, radio y televisión. Tu inversión, en el lugar correcto y frente a la audiencia correcta.',
     includes: [
-      'Contratos y términos rediseñados',
-      'Políticas internas visuales',
-      'Guías y manuales legales claros',
-      'Flujos y mapas de procesos',
+      'Plan de medios a la medida',
+      'Negociación de espacios y tarifas',
+      'Contenidos patrocinados',
+      'Seguimiento de pautas al aire',
     ],
-    idealFor: ['Startups', 'Empresas en crecimiento', 'Equipos de RR.HH.'],
+    idealFor: ['Marcas', 'Lanzamientos', 'Empresas'],
     theme: 'ivory',
   },
   {
-    key: 'governance',
+    key: 'pr',
     n: '02',
-    en: 'Governance',
-    title: 'Gobierno',
-    accent: 'corporativo',
+    en: 'Public Relations',
+    title: 'Relaciones',
+    accent: 'públicas',
     lead:
-      'Estructuras de decisión sólidas para que tu empresa crezca con orden: órganos de gobierno, roles definidos, protocolos y reglas claras entre socios y familia.',
+      'Construyo la relación de tu marca con los medios y los periodistas. Notas de prensa, entrevistas y media tours que convierten tu historia en noticia.',
     includes: [
-      'Estatutos y pactos de socios',
-      'Protocolo de empresa familiar',
-      'Consejos y comités de dirección',
-      'Matrices de roles y facultades',
+      'Notas y comunicados de prensa',
+      'Gestión de entrevistas',
+      'Media tours y ruedas de prensa',
+      'Relación con periodistas',
     ],
-    idealFor: ['Empresas familiares', 'Sociedades con socios', 'Pymes'],
+    idealFor: ['Empresas', 'Instituciones', 'Voceros'],
     theme: 'blush',
   },
   {
-    key: 'compliance',
+    key: 'influencer',
     n: '03',
-    en: 'Compliance',
-    title: 'Cumplimiento',
-    accent: 'normativo',
+    en: 'Influencer Marketing',
+    title: 'Marketing de',
+    accent: 'influencers',
     lead:
-      'Identifico riesgos antes de que se conviertan en problemas. Diseño programas de cumplimiento a la medida, con controles, capacitación y seguimiento continuo.',
+      'Selecciono los perfiles que de verdad conectan con tu público, negocio las colaboraciones y coordino cada campaña de principio a fin, con seguimiento de resultados.',
     includes: [
-      'Mapa y matriz de riesgos',
-      'Códigos de ética y conducta',
-      'Prevención de lavado (PLAFT)',
-      'Protección de datos personales',
+      'Selección de perfiles afines',
+      'Negociación de colaboraciones',
+      'Coordinación de campañas',
+      'Seguimiento y reporte',
     ],
-    idealFor: ['Sujetos obligados', 'Empresas reguladas', 'Organizaciones'],
+    idealFor: ['Marcas de consumo', 'Lanzamientos', 'Eventos'],
     theme: 'ink',
   },
   {
-    key: 'planning',
+    key: 'activations',
     n: '04',
-    en: 'Strategic Planning',
-    title: 'Planificación',
-    accent: 'estratégica',
+    en: 'Brand Activations',
+    title: 'Campañas y',
+    accent: 'activaciones',
     lead:
-      'Del análisis a la acción. Alineo la visión de negocio con la estructura legal para que cada decisión tenga dirección, objetivos medibles y un plan realista.',
+      'Eventos, lanzamientos y experiencias de marca que la gente recuerda. Del concepto a la producción, cuido cada detalle para que tu marca se viva en persona.',
     includes: [
-      'Diagnóstico legal y de negocio',
-      'Hoja de ruta y objetivos',
-      'Estructuración de nuevos proyectos',
-      'Indicadores y seguimiento',
+      'Concepto y planificación',
+      'Lanzamientos de producto',
+      'Producción de eventos',
+      'Regalos corporativos',
     ],
-    idealFor: ['Emprendedores', 'Directivos', 'Nuevos negocios'],
+    idealFor: ['Marcas', 'Empresas', 'Fechas especiales'],
     theme: 'champagne',
   },
   {
-    key: 'pm',
+    key: 'counsel',
     n: '05',
-    en: 'Legal Project Management',
-    title: 'Gestión de',
-    accent: 'proyectos legales',
+    en: 'Strategic Counsel',
+    title: 'Comunicación',
+    accent: 'estratégica',
     lead:
-      'Gestiono asuntos legales como proyectos: alcance, tiempos, responsables y entregables claros. Menos incertidumbre, más control y resultados visibles.',
+      'Acompaño a organizaciones y líderes en su posicionamiento: mensajes clave, preparación de voceros y gestión de la reputación, también en momentos de crisis.',
     includes: [
-      'Planificación y alcance del proyecto',
-      'Cronogramas y entregables',
-      'Coordinación de equipos y terceros',
-      'Reportes de avance claros',
+      'Posicionamiento institucional',
+      'Entrenamiento de voceros',
+      'Mensajes clave y discurso',
+      'Gestión de reputación y crisis',
     ],
-    idealFor: ['Departamentos legales', 'Fusiones y procesos', 'Proyectos complejos'],
+    idealFor: ['Líderes', 'Instituciones', 'Empresas'],
     theme: 'wine',
   },
 ];
@@ -117,84 +120,92 @@ export const SERVICES: Service[] = [
 export const STEPS = [
   {
     n: '01',
-    title: 'Escucho',
-    em: 'tu contexto',
-    text: 'Una primera conversación, con cita previa, para entender tu negocio, tus objetivos y lo que hoy te preocupa.',
+    title: 'Conversamos',
+    em: 'tu objetivo',
+    text: 'Un primer acercamiento —una consulta gratuita de 30 minutos por videollamada— para entender tu marca, tu reto y lo que quieres lograr.',
   },
   {
     n: '02',
-    title: 'Diagnostico',
-    em: 'con claridad',
-    text: 'Analizo documentos, procesos y riesgos. Te entrego un mapa claro de dónde estás y qué necesitas.',
+    title: 'Diseño',
+    em: 'la estrategia',
+    text: 'Te presento una propuesta clara: mensajes, medios, canales, tiempos e inversión. Sin letra pequeña.',
   },
   {
     n: '03',
-    title: 'Diseño',
-    em: 'la fórmula',
-    text: 'Construyo una solución a la medida: estructura, documentos y procesos pensados para personas reales.',
+    title: 'Ejecuto',
+    em: 'y doy seguimiento',
+    text: 'Activo la estrategia con medios, periodistas e influencers, y acompaño cada acción de cerca.',
   },
   {
     n: '04',
-    title: 'Acompaño',
-    em: 'la ejecución',
-    text: 'Implementamos juntos y damos seguimiento para que la solución funcione en el día a día.',
+    title: 'Reporto',
+    em: 'resultados',
+    text: 'Al cierre recibes un reporte con lo que se logró: publicaciones, alcance, apariciones y aprendizajes.',
   },
 ];
 
-export const AUDIENCE = [
-  { t: 'Empresas en crecimiento', d: 'Que necesitan orden legal para escalar sin fricciones.' },
-  { t: 'Empresas familiares', d: 'Que quieren proteger el legado y la armonía entre generaciones.' },
-  { t: 'Emprendedores y startups', d: 'Que buscan nacer con bases sólidas desde el día uno.' },
-  { t: 'Profesionales independientes', d: 'Que quieren contratos y procesos que trabajen por ellos.' },
+export const MODES = [
+  {
+    t: 'Por proyecto',
+    d: 'Lanzamientos, eventos, activaciones o campañas con fecha de inicio y cierre definidos.',
+  },
+  {
+    t: 'Fee mensual',
+    d: 'Trabajo como tu gabinete de comunicación externo: gestión continua con medios y cuidado de tu reputación.',
+  },
+  {
+    t: 'Asesoría estratégica',
+    d: 'Consultoría para posicionamiento institucional y preparación de voceros y líderes.',
+  },
 ];
 
 export const TESTIMONIALS = [
   {
-    q: 'Por primera vez entendimos nuestros contratos. Diana los convirtió en documentos que todo el equipo usa.',
-    a: 'Directora de operaciones',
+    q: 'Nuestro lanzamiento salió en los medios que de verdad le importaban a nuestro público. Todo bien coordinado.',
+    a: 'Gerente de marca',
+    s: 'Consumo masivo',
+  },
+  {
+    q: 'Andreina preparó a nuestros voceros y cambió por completo la forma en que nos comunicamos con la prensa.',
+    a: 'Director ejecutivo',
+    s: 'Institución',
+  },
+  {
+    q: 'La campaña con influencers fue precisa: perfiles afines, contenido auténtico y un reporte muy claro.',
+    a: 'Directora de mercadeo',
+    s: 'Marca de belleza',
+  },
+  {
+    q: 'Tenerla como gabinete externo nos dio presencia constante en medios y tranquilidad.',
+    a: 'Socio fundador',
     s: 'Empresa de servicios',
   },
   {
-    q: 'Su enfoque estratégico fue clave para ordenar la sociedad y crecer con tranquilidad.',
-    a: 'Socio fundador',
-    s: 'Sector comercial',
-  },
-  {
-    q: 'Cercana, clara y muy organizada. Cada etapa del proyecto tuvo tiempos y entregables definidos.',
-    a: 'Gerente general',
-    s: 'Empresa familiar',
-  },
-  {
-    q: 'Nos ayudó a implementar un programa de cumplimiento práctico, sin burocracia innecesaria.',
-    a: 'Oficial de cumplimiento',
-    s: 'Entidad regulada',
-  },
-  {
-    q: 'Una asesoría moderna, con visión de negocio. Totalmente recomendada.',
+    q: 'Estratégica, cercana y con muy buenas relaciones en medios. Totalmente recomendada.',
     a: 'Emprendedora',
-    s: 'Startup tecnológica',
+    s: 'Marca local',
   },
 ];
 
 export const FAQ = [
   {
-    q: '¿Cómo agendo una consulta?',
-    a: 'La atención es exclusivamente con cita previa. Escríbeme por WhatsApp, cuéntame brevemente tu caso y coordinamos el día y la hora que mejor te funcione, de forma presencial o virtual.',
+    q: '¿La primera consulta tiene costo?',
+    a: 'No. La primera conversación es una consulta gratuita de 30 minutos por videollamada para conocer tu marca y tu objetivo. Escríbeme y coordinamos el día y la hora.',
   },
   {
-    q: '¿Qué es exactamente el Legal Design?',
-    a: 'Es una disciplina que aplica principios de diseño al derecho. El resultado son contratos, políticas y procesos más claros, visuales y fáciles de usar, sin perder rigor jurídico.',
+    q: '¿Trabajas por proyecto o de forma mensual?',
+    a: 'Ambas. Puedes contratarme para un proyecto puntual (un lanzamiento, un evento, una campaña) o con un fee mensual como tu gabinete de comunicación externo. También ofrezco asesoría estratégica.',
   },
   {
-    q: '¿Trabajas con empresas pequeñas o solo con corporaciones?',
-    a: 'Con ambas. Acompaño desde emprendedores y profesionales independientes hasta pymes, empresas familiares y organizaciones consolidadas. Cada solución se adapta al tamaño y la etapa del negocio.',
+    q: '¿Con qué tipo de medios trabajas?',
+    a: 'Con medios digitales, impresos, radio y televisión, además de creadores de contenido e influencers. La mezcla depende de tu público y tu objetivo.',
   },
   {
-    q: '¿Ofreces servicios de forma virtual?',
-    a: 'Sí. Gran parte del trabajo puede realizarse en línea, con reuniones virtuales y entregables digitales, para clientes dentro y fuera de República Dominicana.',
+    q: '¿Cómo mides los resultados?',
+    a: 'Cada proyecto cierra con un reporte de resultados: publicaciones obtenidas, apariciones, alcance estimado y aprendizajes para la siguiente acción.',
   },
   {
-    q: '¿Cómo se definen los honorarios?',
-    a: 'Después de la primera conversación preparo una propuesta clara con alcance, tiempos y honorarios. Sin sorpresas: sabrás desde el inicio qué incluye cada etapa.',
+    q: '¿En cuánto tiempo respondes?',
+    a: 'Respondo cada solicitud en un plazo máximo de 48 horas. Si es urgente, escríbeme directamente por WhatsApp.',
   },
 ];

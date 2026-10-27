@@ -3,14 +3,14 @@ import { animate, motion, useInView, useMotionValue, useMotionValueEvent } from 
 import { FadeUp, MaskLine } from './RevealText';
 import { Calendar, Check, Clock, Spark } from './Icons';
 
-const LEGALESE = [
-  'CLÁUSULA PRIMERA: OBJETO. Por medio del presente instrumento, LA PRESTADORA se obliga frente a EL CLIENTE, quien acepta, a la prestación de los servicios profesionales descritos en el Anexo A, el cual forma parte integral del presente contrato, en los términos, condiciones y modalidades que más adelante se establecen, sin perjuicio de las demás obligaciones que pudieren derivarse de la ley aplicable.',
-  'CLÁUSULA SEGUNDA: CONTRAPRESTACIÓN. Como contraprestación por los servicios objeto del presente contrato, EL CLIENTE se compromete a pagar a LA PRESTADORA la suma convenida en el Anexo B, pagadera en la forma y plazos ahí previstos, más los impuestos correspondientes, quedando entendido que cualquier retraso generará los intereses moratorios de conformidad con la normativa vigente.',
-  'CLÁUSULA TERCERA: DURACIÓN. El presente contrato tendrá una vigencia de doce (12) meses contados a partir de la fecha de su suscripción, pudiendo ser renovado de manera automática por períodos iguales, salvo que alguna de las partes notifique por escrito a la otra su intención de no renovarlo con una antelación no menor de treinta (30) días calendario.',
-  'CLÁUSULA CUARTA: CONFIDENCIALIDAD. Las partes se obligan a mantener la más estricta reserva respecto de toda información a la que tuvieren acceso con motivo de la ejecución del presente contrato…',
+const PRESS_RELEASE = [
+  'PARA DIFUSIÓN INMEDIATA. Santo Domingo, República Dominicana. La empresa anuncia el lanzamiento de su nueva línea de productos, la cual estará disponible a partir del próximo mes en los principales puntos de venta del país, según informaron sus ejecutivos a través del presente comunicado.',
+  'De acuerdo con la gerencia, el lanzamiento forma parte del plan de expansión de la compañía para el presente año fiscal, que contempla además la apertura de nuevos canales de distribución y la ampliación de su portafolio, en respuesta a la creciente demanda registrada en los últimos trimestres.',
+  'La nueva línea fue desarrollada tras un proceso de investigación de mercado que incluyó encuestas, grupos focales y pruebas de producto, con el objetivo de responder a las necesidades de los consumidores locales, indicaron los representantes de la empresa durante el anuncio.',
+  'Para más información, los interesados pueden comunicarse con el departamento correspondiente a través de los canales oficiales de la empresa. Fin del comunicado…',
 ];
 
-export default function LegalDesignShowcase() {
+export default function StrategyShowcase() {
   const wrap = useRef<HTMLDivElement>(null);
   const pos = useMotionValue(50);
   const [p, setP] = useState(50);
@@ -38,13 +38,13 @@ export default function LegalDesignShowcase() {
     <section className="showcase">
       <div className="container">
         <div className="showcase__head">
-          <p className="eyebrow eyebrow--center"><Spark size={12} /> Legal Design en acción</p>
+          <p className="eyebrow eyebrow--center"><Spark size={12} /> La estrategia en acción</p>
           <h2 className="h2 h2--center">
-            <MaskLine>Mismo contrato,</MaskLine>
-            <MaskLine delay={0.1}><em>otra experiencia.</em></MaskLine>
+            <MaskLine>Misma noticia,</MaskLine>
+            <MaskLine delay={0.1}><em>otro alcance.</em></MaskLine>
           </h2>
           <FadeUp>
-            <p className="showcase__sub">Desliza para ver cómo un documento legal tradicional se convierte en uno claro, visual y fácil de usar.</p>
+            <p className="showcase__sub">Desliza para ver la diferencia entre enviar un comunicado y diseñar una estrategia de comunicación completa.</p>
           </FadeUp>
         </div>
 
@@ -66,53 +66,53 @@ export default function LegalDesignShowcase() {
             <div className="compare__after">
               <div className="nd">
                 <div className="nd__head">
-                  <span className="nd__tag">Contrato de servicios</span>
-                  <h4>Lo que acordamos, <em>en simple.</em></h4>
+                  <span className="nd__tag">Plan de lanzamiento</span>
+                  <h4>Tu noticia, <em>en todos lados.</em></h4>
                   <div className="nd__parties">
-                    <span><i className="nd__av nd__av--a">TÚ</i> Cliente</span>
+                    <span><i className="nd__av nd__av--a">TÚ</i> Tu marca</span>
                     <span className="nd__amp">&</span>
-                    <span><i className="nd__av nd__av--b">FL</i> Fórmula Legal</span>
+                    <span><i className="nd__av nd__av--b">AG</i> Medios y creadores</span>
                   </div>
                 </div>
                 <div className="nd__grid">
                   <div className="nd__tile">
                     <span className="nd__ic"><Check size={16} /></span>
-                    <small>¿Qué haremos?</small>
-                    <p>Servicios legales descritos en el Anexo A.</p>
+                    <small>Prensa</small>
+                    <p>Notas publicadas en los medios que lee tu público.</p>
                   </div>
                   <div className="nd__tile nd__tile--blush">
-                    <span className="nd__ic">$</span>
-                    <small>¿Cuánto cuesta?</small>
-                    <p>Monto fijo, pagos según calendario.</p>
+                    <span className="nd__ic">@</span>
+                    <small>Influencers</small>
+                    <p>Creadores afines contando tu historia.</p>
                   </div>
                   <div className="nd__tile">
                     <span className="nd__ic"><Calendar size={16} /></span>
-                    <small>¿Por cuánto tiempo?</small>
+                    <small>Media tour</small>
                     <div className="nd__time">
                       <span /><span /><span /><span />
                     </div>
-                    <p>12 meses, renovables.</p>
+                    <p>Entrevistas en radio y TV.</p>
                   </div>
                   <div className="nd__tile nd__tile--ink">
                     <span className="nd__ic"><Clock size={16} /></span>
-                    <small>¿Y si quiero terminar?</small>
-                    <p>Avísame con 30 días de anticipación.</p>
+                    <small>Reporte</small>
+                    <p>Resultados medidos al cierre.</p>
                   </div>
                 </div>
-                <div className="nd__note"><Spark size={12} /> Tu información es confidencial. Siempre.</div>
+                <div className="nd__note"><Spark size={12} /> Cada acción, medida y reportada.</div>
               </div>
-              <span className="compare__label compare__label--r">Con Legal Design</span>
+              <span className="compare__label compare__label--r">Con estrategia AG</span>
             </div>
 
             {/* BEFORE (clipped layer) */}
             <div className="compare__before" style={{ clipPath: `inset(0 ${100 - p}% 0 0)` }}>
               <div className="od">
-                <h4>CONTRATO DE PRESTACIÓN DE SERVICIOS PROFESIONALES</h4>
-                {LEGALESE.map((t, i) => (
+                <h4>COMUNICADO DE PRENSA</h4>
+                {PRESS_RELEASE.map((t, i) => (
                   <p key={i}>{t}</p>
                 ))}
               </div>
-              <span className="compare__label">Tradicional</span>
+              <span className="compare__label">Solo un comunicado</span>
             </div>
 
             <motion.div className="compare__handle" style={{ left: `${p}%` }}>
